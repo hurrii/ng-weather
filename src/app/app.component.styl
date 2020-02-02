@@ -1,0 +1,32 @@
+html
+  font-size 10px
+  height 100%
+  line-height 1.5
+
+body
+  font-size 1.6rem
+  font-weight normal
+  text-rendering optimizeLegibility
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  font-smoothing antialiased
+  height 100%
+
+*
+  box-sizing border-box
+
+@media screen and (max-width: 767px)
+  html
+    font-size calc(10px + 12 * (100vw - 375px) / 392)
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+  html
+    font-size calc(10px + 4 * (100vw - 768px) / 256)
+
+@media screen and (min-width: 1025px) and (max-width: 1439px)
+  html
+    font-size calc(7.5px + 3 * (100vw - 1025px) / 416)
+
+@media screen and (min-width: 1440px)
+  html
+    font-size 16px

@@ -1,0 +1,21 @@
+.table-root
+  <table *ngIf="this.weather" class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Дата и время</th>
+      <th scope="col">Облачность</th>
+      <th scope="col">Прогноз</th>
+      <th scope="col">Скорость ветра (м./сек.)</th>
+      <th scope="col">Снег (мм./3 ч.)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of this.weather.list">
+      <td>{{ item.dt_txt }}</td>
+      <td>{{ item.clouds.all }}</td>
+      <td>{{ item.weather[0].description }}</td>
+      <td>{{ item.wind.speed }}</td>
+      <td>{{ item.snow['3h'] }}</td>
+    </tr>
+    </tbody>
+  </table>
